@@ -1,0 +1,83 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("images/dau2rr-d4459073-574e-426e-bd20-6ecac506198c.jpg");
+    background-position: center;
+    background-size: 135%;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Center the form and add padding */
+form {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px 30px;
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+/* Style the heading */
+form h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #444;
+}
+
+/* Style the paragraph */
+form p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Style the labels */
+form label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Style the buttons */
+form input[type="button"] {
+    background-color: #009700;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="button"]:hover {
+    background-color: #006900;
+}
+
+/* Style the submit button */
+form input[type="submit"] {
+    background-color: #aa0000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+form input[type="submit"]:hover {
+    background-color: #690000;
+}

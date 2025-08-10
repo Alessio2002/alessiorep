@@ -1,0 +1,278 @@
+/* General Page Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Images/forest.jpg");
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+    cursor: url("Images/cursor.cur") 0 0, auto;
+  }
+
+  body.clicked,
+body.clicked button {
+    cursor: url("Images/click.cur"), auto;
+  }
+  
+  /* Main Container */
+  .container {
+    width: 80%;
+    max-width: 600px;
+    margin: auto;
+    background: #bbbbbbad;
+    padding: 20px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+
+  
+  
+  /* Heading */
+  h1 {
+    color: #000000;
+    font-size: 50px;
+    font-weight:900
+  }
+  
+  /* Controls (Search, Filter, Sort) */
+  .controls {
+    margin-bottom: 15px;
+  }
+  
+  input,
+  select,
+  button {
+    padding: 10px;
+    margin: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  button {
+    background-color: #659700;
+    color: white;
+    cursor: url("Images/pointer.cur"), auto;
+  }
+  
+  button:hover {
+    background-color: #5b8800;
+  }
+  
+  /* Animal List */
+  #animalList {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #animalList li {
+    background: #fff;
+    margin: 8px 0;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .animal-name {
+    width: 45%;
+    text-align: start;
+    margin-left: 25px;
+  }
+  
+  .remove-btn {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 8px;
+    cursor: pointer;
+  }
+
+  .delete-btn {
+    margin-left: auto;
+  }
+  
+  .remove-btn:hover {
+    background-color: #c82333;
+  }
+  
+  /* Add New Animal Form */
+  .add-animal {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #ddd;
+  }
+
+  .animalDesig {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    gap: 145px;
+}
+
+#elainLaji {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+#elainLuokka {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 192px;
+}
+
+.sortAnimals2 {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+/*Phone*/
+
+@media (max-width: 600px) {
+  .animalDesig {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .label-block h3 {
+    font-size: 18px;
+    margin: 0;
+  }
+
+  .container {
+    width: 95%;
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 36px;
+  }
+
+  .animalDesig {
+    flex-direction: column;
+  }
+
+  #elainLaji,
+  #elainLuokka {
+    width: 0%;
+    margin: 0;
+  }
+
+  .animal-name {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #animalList li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .delete-btn {
+    margin-left: auto;
+  }
+}
+
+/*4k*/
+@media (min-width: 2560px) {
+  #animalList {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .container {
+    width: 100%;
+    max-width: 3000px;
+    min-width: 2000px;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .sort-buttons button,
+  .controls input,
+  .controls select {
+    font-size: 20px;
+    padding: 16px 24px;
+  }
+
+  #animalList li {
+    justify-content: space-between;
+  }
+
+  .animal-name,
+  .animal-type {
+    font-size: 20px;
+  }
+
+  h1 {
+    font-size: 80px;
+  }
+
+  .add-animal {
+    font-size: 20px;
+  }
+}
+
+/*big screens*/
+@media (min-width: 2000px) {
+  .container {
+    width: 100%;
+    max-width: 3000px;
+    min-width: 2000px;
+  }
+  
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  min-height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+  h1 {
+    font-size: 72px;
+  }
+
+  input,
+  select,
+  button {
+    font-size: 24px;
+    padding: 16px;
+  }
+
+  .animal-name {
+    font-size: 24px;
+  }
+
+  #animalList li {
+    font-size: 22px;
+    padding: 16px;
+  }
+
+  .sort-buttons {
+    justify-content: flex-start;
+  }
+
+  .add-animal {
+    font-size: 20px;
+  }
+}
+

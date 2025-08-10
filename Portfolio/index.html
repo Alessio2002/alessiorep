@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="/Portfolio/style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo" data-i18n="navLogo">Alessio's portfolio</div>
+    <div class="menu-toggle" onclick="toggleMenu()">&#9776;</div>
+    <ul class="nav-links" id="nav">
+      <li><a href="#hero" data-i18n="navHome">Home</a></li>
+      <li><a href="#about" data-i18n="navAbout">About</a></li>
+      <li><a href="#projects" data-i18n="navProjects">Projects</a></li>
+      <li><a href="gallery.html" data-i18n="navGallery">Gallery</a></li>
+      <li><a href="#contact" data-i18n="navContact">Contact</a></li>
+      <!-- Language Selector -->
+      <div class="language-selector">
+        <label for="language-select" data-i18n="languageLabel"><strong>🌐 Languages:</strong></label>
+        <select id="language-select" onchange="changeLanguage(this.value)">
+          <option value="en" data-i18n="langEnglish">🇬🇧 English</option>
+          <option value="fi" data-i18n="langFinnish">🇫🇮 Finnish</option>
+          <option value="ion" data-i18n="langIonian">🏛️ Ionian (standard)</option>
+          <option value="it" data-i18n="langItalian">🇮🇹 Italian</option>
+          <option value="gr" data-i18n="langGreek">🇬🇷 Greek</option>
+        </select>
+      </div>      
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+<section class="hero" id="hero">
+  <div class="hero-content">
+    <h1 data-i18n="heroTitle">Welcome to my portfolio</h1>
+    <p data-i18n="heroSubtitle">Student</p>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="about" id="about">
+  <img src="/Portfolio/images/Alessio.jpg" alt="Profile Picture" />
+  <div>
+    <h2 data-i18n="aboutHeading">About Me:</h2>
+    <p data-i18n="aboutText">Hello! I'm Alessio. I'm a student at Business College Helsinki</p>
+  </div>
+</section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2 data-i18n="projectsHeading">Projects</h2>
+    <div class="project-card">
+      <h3 data-i18n="projectTitle">Project One</h3>
+      <p data-i18n="projectDescription">A brief description of the project.</p>
+      <button onclick="openModal()" data-i18n="moreInfo">More Info</button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <p data-i18n="modalText">Here are more details about the project...</p>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button onclick="scrollToTop()" id="backToTop">&uarr;</button>
+
+  <!-- Footer / Contact Section -->
+  <footer id="contact">
+    <form id="contact-form">
+      <input type="text" name="name" placeholder="Your Name" data-i18n-placeholder="namePlaceholder" required />
+      <input type="email" name="email" placeholder="Your Email" data-i18n-placeholder="emailPlaceholder" required />
+      <textarea name="message" placeholder="Your Message" data-i18n-placeholder="contactPlaceholder"></textarea>
+      <button type="submit" data-i18n="sendButton">Send</button>
+    </form>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const form = document.getElementById("contact-form");
+        const languageSelect = document.getElementById("language-select");
+    
+        if (form) {
+          form.addEventListener("submit", function (e) {
+            e.preventDefault();
+    
+            const nameInput = form.querySelector('input[name="name"]');
+            const emailInput = form.querySelector('input[name="email"]');
+            const messageInput = form.querySelector('textarea[name="message"]');
+    
+            const name = nameInput.value.trim();
+            const email = emailInput.value.trim();
+            const message = messageInput.value.trim();
+    
+            if (!name || !email || !message) {
+              alert("Please fill in all fields.");
+              return;
+            }
+    
+            // Get current language
+    const currentLang = languageSelect.value;
+    const sentMessage = translations[currentLang]?.messageSent || "Message sent!";
+    const sentName = translations[currentLang]?.nameSent || "Name:";
+    const sentEmail = translations[currentLang]?.mailSent || "Email:";
+    const messageDescription = translations[currentLang]?.messSent || "Message:";
+
+    alert(`${sentMessage}\n\n${sentName} ${name}\n${sentEmail} ${email}\n${messageDescription} ${message}`);
+    console.log(`${sentName} ${name}`);
+    console.log(`${sentEmail} ${email}`);
+    console.log(`${messageDescription} ${message}`);
+            // Clear the fields
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+            nameInput.value = "";
+            emailInput.value = "";
+            messageInput.value = "";
+          });
+        }
+      });
+
+    </script>
+    
+    <h1>ℹ️</h1>
+    <h4>02760, ESPOO</h4>
+    <h4>📞 +358440000000</h4>
+    <h4>@: alessio.zanasi@example.com</h4>
+
+</footer>
+
+  <!-- Script -->
+  <script src="/Portfolio/script.js"></script>
+</body>
+</html>

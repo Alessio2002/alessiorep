@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pikku Eläintarha</title>
+    <link rel="icon" href="favicon.png" type="image/png" />
+    <link rel="stylesheet" href="style.css" />
+  
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+
+    <div class="container">
+    <h1>ZOO</h1>
+
+      <!-- Haku ja suodatus osio -->
+      <div class="controls">
+        <input type="text" id="searchAnimal" placeholder="Etsi nimellä..." />
+        <select id="filterType">
+          <option value="Kaikki">Kaikki eläimet</option>
+          <option value="Nisäkäs">Nisäkäs</option>
+          <option value="Lintu">Lintu</option>
+          <option value="Matelija">Matelija</option>
+          <option value="Sammakkoeläin">Sammakkoeläin</option>
+          <option value="Kala">Kala</option>
+        </select>
+      </div>
+
+        <div class="sort-buttons">
+        <button id="sortAnimals">Järjestä A-Ö</button>
+        <button id="sortAnimals2">Järjestä Ö-A</button>
+      </div>
+    
+      <div class = "animalDesig">
+      <h3 id="elainLaji">Eläinlajit:</h3>
+      <h3 id="elainLuokka">Eläinluokka:</h3>
+    </div>
+      
+      <!-- Eläinten listanäkymä -->
+      <ul id="animalList"></ul>
+
+      <!-- Uuden eläimen lisääminen -->
+      <div class="add-animal">
+        <h2>Lisää uusi eläin</h2>
+        <input type="text" id="newAnimalName" placeholder="Eläimen nimi" />
+        <select id="newAnimalType">
+          <option value="Nisäkäs">Nisäkäs</option>
+          <option value="Lintu">Lintu</option>
+          <option value="Matelija">Matelija</option>
+          <option value="Sammakkoeläin">Sammakkoeläin</option>
+          <option value="Kala">Kala</option>
+        </select>
+        <button id="addAnimal">Lisää eläin</button>
+      </div>
+    </div>
+
+    <script>
+      document.addEventListener("mousedown", () => {
+        document.body.classList.add("clicked");
+      });
+    
+      document.addEventListener("mouseup", () => {
+        document.body.classList.remove("clicked");
+      });
+    </script>
+
+    <script>
+      const button = document.querySelector("button");
+    
+      button.addEventListener("mousedown", () => {
+        document.body.classList.add("clicked");
+      });
+    
+      button.addEventListener("mouseup", () => {
+        document.body.classList.remove("clicked");
+      });
+    
+      // Also reset if mouse leaves the button
+      button.addEventListener("mouseleave", () => {
+        document.body.classList.remove("clicked");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+    background: lightblue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode';
+    color: white;
+}
+
+.round {
+    margin: 50px auto;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background:steelblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 10px #333, 0 0 6px #333 inset;
+    transition: height 3s 1s ease-in, width 3s ease-out;
+}
+
+.round:hover {
+    height: 600px;
+    width: 600px;
+}
+
+.square {
+    margin: 50px auto;
+    width: 100px;
+    height: 100px;
+    background:steelblue;
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 600s 0s ease-in-out;
+}
+
+.square:hover {
+    transform: rotate(10000000deg);
+    background: steelblue;
+    height: 600px;
+    width: 600px;
+}
