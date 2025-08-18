@@ -19,7 +19,6 @@ Olen tehnyt portfolion ja repositorion missä on tekemiäni tehtäviä
 
 ### Linkit
 
-- Repositorio URL: (https://github.com/Alessio2002/alessiorep.git) 
 - Portfolio URL: (https://github.com/Alessio2002/Portfolio.git)
 - Live portfolio URL: (https://alessio2002.github.io/Portfolio)
 
